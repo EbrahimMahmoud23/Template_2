@@ -228,8 +228,20 @@ header nav .form i {
   justify-content: flex-end;
 }
 
+@media (max-width: 767px) {
+  .landing .overlay .Text {
+    width: 100%;
+  }
+}
+
 .landing .overlay .Text .content {
   max-width: 500px;
+}
+
+@media (max-width: 767px) {
+  .landing .overlay .Text .content {
+    max-width: 100%;
+  }
 }
 
 .landing .Text .content h2 {
@@ -248,6 +260,12 @@ header nav .form i {
   top: 50%;
   transform: translateY(-50%);
   color: white;
+}
+
+@media (max-width: 767px) {
+  .landing .change-background {
+    display: none;
+  }
 }
 
 .landing .fa-angle-right {
@@ -284,11 +302,13 @@ header nav .form i {
   padding-bottom: 100px;
 }
 
-.services .col {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  column-gap: 40px;
-  row-gap: 60px;
+@media (min-width: 768px) {
+  .services .col {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    column-gap: 40px;
+    row-gap: 60px;
+  }
 }
 
 .services .col .info {
@@ -297,6 +317,19 @@ header nav .form i {
 
 .services .col .info i {
   margin-right: 50px;
+}
+
+@media (max-width: 767px) {
+  .services .col .info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .services .col .info i {
+    margin: 0 0 30px;
+  }
 }
 
 .services .col .info h3 {
@@ -406,7 +439,6 @@ header nav .form i {
 
 .portfolio .images-container .box {
   position: relative;
-  flex-basis: 25%;
   overflow: hidden;
 }
 
